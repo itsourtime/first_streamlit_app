@@ -41,7 +41,7 @@ try:
 except URLError as e:
   streamlit.error()
   
-streamlit.stop()
+#streamlit.stop()
 
 #snowflake functions
 
