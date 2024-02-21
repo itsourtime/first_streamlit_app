@@ -37,6 +37,7 @@ streamlit.text("Hello from Snowflake:")
 streamlit.text(my_data_row)
 
 my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list")
-my_data_row_fruits = my_cur.fetchone()
+# my_data_row_fruits = my_cur.fetchone() #fetch 1 row
+my_data_row_fruits = my_cur.fetchall() #fetch ALL row
 streamlit.header("The fruit list contains")
 streamlit.dataframe(my_data_row_fruits)
