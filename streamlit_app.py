@@ -49,3 +49,5 @@ my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list")
 my_data_row_fruits = my_cur.fetchall() #fetch ALL row
 streamlit.header("The fruit list contains")
 streamlit.dataframe(my_data_row_fruits)
+
+my_cur.execute("INSERT into pc_rivery_db.public.fruit_load_list (fruit_name) values('from streamlit')")
