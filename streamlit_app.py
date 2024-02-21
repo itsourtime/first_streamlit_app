@@ -41,7 +41,7 @@ streamlit.text(my_data_row)
 new_fruit_choice = streamlit.text_input('What fruit would you like to add to the list', 'jackfruit')
 streamlit.write('The user entered ', new_fruit_choice)
 
-my_cur.execute("INSERT into pc_rivery_db.public.fruit_load_list (fruit_name) values (new_fruit_choice)")
+my_cur.execute("INSERT into pc_rivery_db.public.fruit_load_list (fruit_name) values (" new_fruit_choice ")")
 
 my_cur.execute("SELECT * FROM pc_rivery_db.public.fruit_load_list")
 my_data_row_fruits = my_cur.fetchall() #fetch ALL row
